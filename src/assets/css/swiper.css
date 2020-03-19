@@ -1,0 +1,81 @@
+/* ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} */
+.swiper{
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  width: 90%;
+}
+.swiper>.swiper-btn{
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.322);
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  color: #eeeeee;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+  transition: .2s;
+}
+.swiper>.swiper-btn:active{
+  filter: blur(2px);
+}
+.swiper>.swiper-btn:hover{
+  background-color:rgba(0, 0, 0, 0.541);
+}
+.swiper>.swiper-btn.swiper-priv{
+  left: 3px;
+}
+.swiper>.swiper-btn.swiper-next{
+  right: 3px;
+}
+.swiper>.swiper-list{
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  max-height: 400px;
+}
+.swiper>.swiper-list>li{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 468px;
+  height: 100%;
+  transition: all .2s;
+}
+.swiper>.swiper-list>.slider-item{
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+}
+.swiper>.swiper-list>li>img{
+  width: 100%;
+  height: 100%;
+}
+.swiper>.swiper-list>.slider-leave,.swiper>.swiper-list>.slider-enter{
+  z-index: 1;
+  filter: blur(2px);
+  transform: scale(0.8);
+}
+.swiper>.swiper-list>.slider-leave{
+  left: 0;
+  margin-left: -5.7%;
+}
+.swiper>.swiper-list>.slider-active{
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper>.swiper-list>.slider-enter{
+  right: 0;
+  margin-right: -5.7%;
+}
