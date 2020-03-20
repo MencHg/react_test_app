@@ -1,17 +1,37 @@
 import React from "react";
-function BasicNavigator(props) {
+import { NavLink } from 'react-router-dom'
+export default function () {
+  let navs = [
+    {
+      link:"/",
+      name:"首页"
+    },
+    {
+      link:"/chaplist",
+      name:"分享列表"
+    },
+    {
+      link:"/login",
+      name:"登录"
+    },
+    {
+      link:"/detail",
+      name:"文章"
+    },
+    {
+      link:"/register",
+      name:"注册"
+    },
+    {
+      link:"/about",
+      name:"关于我"
+    },
+  ]
   return (
-    <nav className="nav-wrap">
-      <div className="nav-logo">
-        <img src="" alt=""/>
-      </div>
-      <ul className="nav-list">
-        <li className="nav-item">home</li>
-        <li className="nav-item">detail</li>
-        <li className="nav-item">chaplist</li>
-        <li className="nav-item">about</li>
-      </ul>
+    <nav id="navigator-header">
+      {navs.map((item,index)=>(
+         <NavLink activeClassName="nav-active" key={index} exact to={item.link}>{item.name}</NavLink>
+      ))}
     </nav>
   )
 }
-export default BasicNavigator;

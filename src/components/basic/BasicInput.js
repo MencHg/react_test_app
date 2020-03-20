@@ -14,7 +14,7 @@ export default class BasicInput extends Component{
   }
   render(){
     return(
-      <input value={(ev)=>this.inputGroup(ev)} type={this.props.type || "text"} placeholder={this.props.placeholder || "add full"} />
+      <input  type={this.props.type || "text"} placeholder={this.props.placeholder || "add full"} />
     )
   }
 }
