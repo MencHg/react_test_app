@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import BasicSwiper from '../basic/BasicSwiper'
 // import axios from '../../plugins/axios'
 let list = [
@@ -55,10 +55,22 @@ export default class AppHome extends Component{
       <>
         <section className="home-banner">
           <BasicSwiper list={this.state.bannerList}></BasicSwiper>
-          <Link to="/">go home</Link>
         </section>
         <section className="homme-recomment">
           <h2>热门推荐</h2>
+          
+          <ul>
+            <li>001:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>002:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>003:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>004:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>005:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>006:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>007:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>008:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>009:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+            <li>010:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni amet cupiditate.</li>
+          </ul>
         </section>
       </>
     )

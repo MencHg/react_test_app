@@ -1,0 +1,242 @@
+#loadding {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff21;
+}
+
+#loadding.loadding-show {
+    display: block;
+}
+
+#loadding>.loadding-item {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#loadding>.loadding-item.soundbyte::before, #loadding>.loadding-item.pellets::before, #loadding>.loadding-item.default::before, #loadding>.loadding-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+#loadding>.loadding-item.default::after {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgba(255, 102, 102, 0.9) 10%, rgba(255, 102, 102, 0.9) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.8) 10%, rgba(255, 102, 102, 0.8) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.7) 10%, rgba(255, 102, 102, 0.7) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.6) 10%, rgba(255, 102, 102, 0.6) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.5) 10%, rgba(255, 102, 102, 0.5) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.4) 10%, rgba(255, 102, 102, 0.4) 35%, transparent 45%), radial-gradient(rgba(255, 102, 102, 0.3) 10%, rgba(255, 102, 102, 0.3) 35%, transparent 45%);
+    background-repeat: no-repeat;
+    background-size: 38% 38%, 32% 32%, 29% 29%, 28% 28%, 27% 27%, 26% 26%, 25% 25%;
+    background-position: 105% 55%, 94% 23%, 75% 5%, 50% 0%, 28% 6%, 12% 20%, 2% 40%;
+    animation: routate 1s infinite linear;
+}
+
+#loadding>.loadding-item.soundbyte::before, #loadding>.loadding-item.pellets::before, #loadding>.loadding-item.default::before {
+    content: "加载中";
+    top: 120%;
+    width: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d10b46fb;
+    font-weight: 700;
+    font-size: 12px;
+    transition: all .1s;
+    animation: textadd 2s infinite linear;
+}
+
+/* soundbyte */
+
+#loadding>.loadding-item.soundbyte>.soundbyte {
+    display: inline-block;
+    margin-top: 70%;
+    width: 5px;
+    height: 15px;
+    background-image: linear-gradient(45deg,#d10b46, transparent 45%, #41b881);
+    border-radius: 5px;
+    animation: soundbyte .6s infinite alternate;
+}
+
+#loadding>.loadding-item.soundbyte>.soundbyte:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+#loadding>.loadding-item.soundbyte>.soundbyte:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+#loadding>.loadding-item.soundbyte>.soundbyte:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+#loadding>.loadding-item.soundbyte>.soundbyte:nth-child(5) {
+    animation-delay: 400ms;
+}
+
+#loadding>.loadding-item.soundbyte>.soundbyte:nth-child(6) {
+    animation-delay: 500ms;
+}
+/* pellets */
+#loadding>.loadding-item.pellets>.pellets {
+    display: inline-block;
+    margin: 80% 2px 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    animation: pellets .6s infinite alternate;
+}
+#loadding>.loadding-item.pellets>.pellets:nth-child(1) {
+    background-color: #cf226ab0;
+    animation-delay: 0ms;
+}
+#loadding>.loadding-item.pellets>.pellets:nth-child(2) {
+    background-color: #22aca5b0;
+    animation-delay: 100ms;
+}
+#loadding>.loadding-item.pellets>.pellets:nth-child(3) {
+    background-color: #59b919b0;
+    animation-delay: 200ms;
+}
+#loadding>.loadding-item.pellets>.pellets:nth-child(4) {
+    background-color: #d23ee6b0;
+    animation-delay: 300ms;
+}
+#loadding>.loadding-item.pellets>.pellets:nth-child(5) {
+    background-color: #bfc202b0;
+    animation-delay: 400ms;
+}
+#loadding>.loadding-item.ray>.ray::before{
+    content: "加载中";
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    animation: raytext 1s infinite linear;
+}
+#loadding>.loadding-item.ray {
+    background-image: linear-gradient(45deg, transparent, transparent 45%, #41b881);
+    border-radius: 50%;
+    animation: ray 1s infinite linear;
+}
+#loadding>.loadding-item.ray::after, #loadding>.loadding-item.ray::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#loadding>.loadding-item.ray::before {
+    z-index: -1;
+    background-image: linear-gradient(45deg, transparent, transparent 40%, #41b881 100%);
+    filter: blur(10px);
+}
+
+#loadding>.loadding-item.ray::after {
+    z-index: 2;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-image: linear-gradient(45deg, #fff, #fff 80%, #41b88180);
+    filter: blur(2px);
+}
+@keyframes raytext {
+    0% {
+        content: "加载中.";
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        content: "加载中..";
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    100% {
+        content: "加载中...";
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+@keyframes ray {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes pellets {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+@keyframes soundbyte {
+    0% {
+        transform: scaleY(1);
+    }
+    75% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(2.2);
+    }
+}
+@keyframes routate {
+    0% {
+        transform: translate(-50%, -50%) rotate3d(0, 0, 1, 0deg);
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate3d(0, 0, 1, 360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes textadd {
+    0% {
+        content: "加载中.";
+        color: rgba(209, 11, 70, 0.984);
+    }
+    25% {
+        content: "加载中...";
+        color: rgba(186, 11, 209, 0.984);
+    }
+    50% {
+        content: "加载中....";
+        color: rgba(113, 11, 209, 0.984);
+    }
+    75% {
+        content: "加载中.....";
+        color: rgba(11, 208, 182, 0.984);
+    }
+    100% {
+        content: "加载中......";
+        color: rgba(208, 11, 70, 0.984);
+    }
+}
